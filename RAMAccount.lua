@@ -9,7 +9,7 @@ function WebserverSettings:SetPort(Port) self.Port = Port end
 function WebserverSettings:SetPassword(Password) self.Password = Password end
 
 local HttpService = game:GetService("HttpService")
-local Request = (syn and syn.request) or (http and http.request or http_request) or (fluxus and fluxus.request) or request
+local Request = syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or request
 
 local function GET(Method, Account, ...)
     local Arguments = {...}
